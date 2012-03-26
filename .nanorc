@@ -1,44 +1,15 @@
-## C/C++
-include "~/.nano/c.nanorc"
-
-## Fortran
-include "~/.nano/fortran.nanorc"
-
-## HTML
-include "~/.nano/html.nanorc"
-
-## Patch files
-include "~/.nano/patch.nanorc"
-
-## Manpages
-include "~/.nano/man.nanorc"
-
-## Perl
-include "~/.nano/perl.nanorc"
-
-## Python
-include "~/.nano/python.nanorc"
-
-## reST
-include "~/.nano/reST.nanorc"
-
-## Ruby
-include "~/.nano/ruby.nanorc"
-
-## Bourne shell scripts
-include "~/.nano/sh.nanorc"
-
-## TeX
-include "~/.nano/tex.nanorc"
-
-## CSS
-include "~/.nano/css.nanorc"
-
-## php
-include "~/.nano/php.nanorc"
-
-## XML
-include "~/.nano/xml.nanorc"
-
-## Lua
-include "~/.nano/lua.nanorc"
+include "~/.dotfiles/nano/c.nanorc"		## C/C++
+include "~/.dotfiles/nano/fortran.nanorc"	## Fortran
+include "~/.dotfiles/nano/html.nanorc"		## HTML
+include "~/.dotfiles/nano/patch.nanorc"		## Patch files
+include "~/.dotfiles/nano/man.nanorc"		## Manpages
+include "~/.dotfiles/nano/perl.nanorc"		## Perl
+include "~/.dotfiles/nano/python.nanorc"	## Python
+include "~/.dotfiles/nano/reST.nanorc"		## reST
+include "~/.dotfiles/nano/ruby.nanorc"		## Ruby
+include "~/.dotfiles/nano/sh.nanorc"		## Bourne shell scripts
+include "~/.dotfiles/nano/tex.nanorc"		## TeX
+include "~/.dotfiles/nano/css.nanorc"		## CSS
+include "~/.dotfiles/nano/php.nanorc"		## php
+include "~/.dotfiles/nano/xml.nanorc"		## XML
+include "~/.dotfiles/nano/lua.nanorc"		## Lua
