@@ -7,3 +7,5 @@ if [ -e ~/.profile ]; then
 else
 	echo "source .dotfiles/bash_profile" >> ~/.bash_profile
 fi
+
+touch .setupcomplete
