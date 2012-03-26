@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp -f .nanorc ~/.nanorc
+
+if [ -e ~/.profile ]; then
+	echo "source .dotfiles/bash_profile" >> ~/.profile
+else
+	echo "source .dotfiles/bash_profile" >> ~/.bash_profile
+fi
