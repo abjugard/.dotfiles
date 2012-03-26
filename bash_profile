@@ -1,1 +1,1 @@
-source prompt
+source ~/.dotfiles/prompt
