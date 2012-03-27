@@ -1,5 +1,6 @@
-export CLICOLOR=1
 export LSCOLORS=FxFxCxDxBxegedabagacad
+export CLICOLOR=1
+
 export EDITOR=nano
 export TERM=xterm-256color
 
