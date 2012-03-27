@@ -1,0 +1,6 @@
+[submodule "nano"]
+	path = nano
+	url = https://github.com/scopatz/nanorc.git
+[submodule "nano-highlight"]
+	path = nano-highlight
+	url = https://github.com/serialhex/nano-highlight.git

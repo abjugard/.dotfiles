@@ -18,7 +18,7 @@ function __git_prompt {
 }
 
 bash_prompt() {	
-	PS1="$txtgrn\u$txtblk@$txtblu\h$txtwht:$txtred\W$txtpur\$(__git_prompt)$txtblk → $txtrst"
+	PS1="$extgrn\u$extblk@$extblu\h$extwht:$extred\W$extpur\$(__git_prompt)$extblk → $txtrst"
 }
 
 bash_prompt

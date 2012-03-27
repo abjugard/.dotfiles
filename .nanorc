@@ -1,15 +1,26 @@
-include "~/.dotfiles/nano/c.nanorc"		## C/C++
-include "~/.dotfiles/nano/fortran.nanorc"	## Fortran
-include "~/.dotfiles/nano/html.nanorc"		## HTML
-include "~/.dotfiles/nano/patch.nanorc"		## Patch files
-include "~/.dotfiles/nano/man.nanorc"		## Manpages
-include "~/.dotfiles/nano/perl.nanorc"		## Perl
-include "~/.dotfiles/nano/python.nanorc"	## Python
-include "~/.dotfiles/nano/reST.nanorc"		## reST
-include "~/.dotfiles/nano/ruby.nanorc"		## Ruby
-include "~/.dotfiles/nano/sh.nanorc"		## Bourne shell scripts
-include "~/.dotfiles/nano/tex.nanorc"		## TeX
-include "~/.dotfiles/nano/css.nanorc"		## CSS
-include "~/.dotfiles/nano/php.nanorc"		## php
-include "~/.dotfiles/nano/xml.nanorc"		## XML
-include "~/.dotfiles/nano/lua.nanorc"		## Lua
+include ~/.dotfiles/nano/asm.nanorc
+include ~/.dotfiles/nano/awk.nanorc
+include ~/.dotfiles/nano/c.nanorc
+include ~/.dotfiles/nano/css.nanorc
+include ~/.dotfiles/nano/debian.nanorc
+include ~/.dotfiles/nano/fortran.nanorc
+include ~/.dotfiles/nano/gentoo.nanorc
+include ~/.dotfiles/nano/groff.nanorc
+include ~/.dotfiles/nano/html.nanorc
+include ~/.dotfiles/nano/java.nanorc
+include ~/.dotfiles/nano/makefile.nanorc
+include ~/.dotfiles/nano/man.nanorc
+include ~/.dotfiles/nano/mutt.nanorc
+include ~/.dotfiles/nano/nanorc.nanorc
+include ~/.dotfiles/nano/objc.nanorc
+include ~/.dotfiles/nano/ocaml.nanorc
+include ~/.dotfiles/nano/patch.nanorc
+include ~/.dotfiles/nano/perl.nanorc
+include ~/.dotfiles/nano/php.nanorc
+include ~/.dotfiles/nano/pov.nanorc
+include ~/.dotfiles/nano/python.nanorc
+include ~/.dotfiles/nano/ruby.nanorc
+include ~/.dotfiles/nano/sh.nanorc
+include ~/.dotfiles/nano/tcl.nanorc
+include ~/.dotfiles/nano/tex.nanorc
+include ~/.dotfiles/nano/xml.nanorc
