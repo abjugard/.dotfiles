@@ -8,6 +8,4 @@ export LANG="en_GB.UTF-8"
 export LANGUAGE="en_GB.UTF-8"
 export LC_ALL="en_GB.UTF-8"
 
-alias ls="ls --color"
-
 source ~/.dotfiles/prompt
