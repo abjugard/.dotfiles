@@ -9,17 +9,17 @@ GIT_CLEAN=" ✓"
 
 function __git_prompt {
 	GIT_PS1_SHOWDIRTYSTATE=1
-	
+
 	if [[ -n $(git status -s 2> /dev/null |grep -v ^# |grep -v "working directory clean") ]]; then
 		state=$GIT_DIRTY
 	else
 		state=$GIT_CLEAN
 	fi
-	
+
 	__git_ps1 " (%s$state )" | sed "s/ \([+*]\{1,\}\)$/\1/"
 }
 
-bash_prompt() {	
+bash_prompt() {
 	PS1="$extgrn\u$extblk@$extblu\h$extwht:$extred\W\[\$(randc)\]\$(__git_prompt)$extblk → $txtrst"
 }
 
