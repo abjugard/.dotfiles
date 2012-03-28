@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source ~/.dotfiles/colours
 
 GIT_DIRTY=" ✗"
@@ -13,12 +15,12 @@ function __git_prompt {
 	else
 		state=$GIT_CLEAN
 	fi
-
+	
 	__git_ps1 " (%s$state )" | sed "s/ \([+*]\{1,\}\)$/\1/"
 }
 
 bash_prompt() {	
-	PS1="$extgrn\u$extblk@$extblu\h$extwht:$extred\W$extpur\$(__git_prompt)$extblk → $txtrst"
+	PS1="$extgrn\u$extblk@$extblu\h$extwht:$extred\W\[\$(randc)\]\$(__git_prompt)$extblk → $txtrst"
 }
 
 bash_prompt

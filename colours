@@ -1,11 +1,18 @@
-function 256c () { echo -ne "\[\033[38;5;$1m\]"; }
+#!/bin/bash
 
-extgrn=`256c 118`
-extblk=`256c 240`
-extblu=`256c 27`
-extwht=`256c 255`
-extred=`256c 160`
-extpur=`256c 165`
+extc() {
+	echo -ne "\[\033[38;5;$1m\]"
+}
+randc() {
+	echo -ne "\033[38;5;$[($RANDOM % 256)+1]m"
+}
+
+extgrn=`extc 118`
+extblk=`extc 240`
+extblu=`extc 27`
+extwht=`extc 255`
+extred=`extc 160`
+extpur=`extc 165`
 
 txtblk="\[\033[0;30m\]" # Black - Regular
 txtred="\[\033[0;31m\]" # Red
