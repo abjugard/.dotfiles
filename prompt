@@ -20,7 +20,7 @@ function __git_prompt {
 }
 
 bash_prompt() {
-	PS1="$extgrn\u$extblk@$extblu\h$extwht:$extred\W\[\$(randc)\]\$(__git_prompt)$extblk → $txtrst"
+	PS1="$extcyn\u$extblk@$extyel\h$extwht:$extred\W\[\$(randC)\]\$(__git_prompt)$extblk → $txtrst"
 }
 
 bash_prompt

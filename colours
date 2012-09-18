@@ -1,18 +1,27 @@
 #!/bin/bash
 
-extc() {
-	echo -ne "\[\033[38;5;$1m\]"
+extC() {
+	echo -ne "\033[38;5;$1m"
 }
-randc() {
+randC() {
 	echo -ne "\033[38;5;$[($RANDOM % 256)+1]m"
 }
 
-extgrn=`extc 118`
-extblk=`extc 240`
-extblu=`extc 27`
-extwht=`extc 255`
-extred=`extc 160`
-extpur=`extc 165`
+printColours() {
+	for i in {1..256}
+	do
+		echo "`extC $i`$i$extrst"
+	done
+}
+
+extgrn=`extC 118`
+extblk=`extC 240`
+extblu=`extC 27`
+extwht=`extC 255`
+extred=`extC 160`
+extpur=`extC 165`
+extyel=`extC 220`
+extcyn=`extC 45`
 
 txtblk="\[\033[0;30m\]" # Black - Regular
 txtred="\[\033[0;31m\]" # Red
