@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias clt='printf \033c'
 alias sl='sl -e'
 alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
@@ -13,3 +14,4 @@ alias egrep='egrep --color=auto'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gl='git log'
