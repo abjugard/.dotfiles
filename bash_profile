@@ -8,7 +8,6 @@ export TERM=xterm-256color
 
 export LANG='en_GB.UTF-8'
 export LANGUAGE=$LANG
-export LC_ALL=$LANG
 
 source ~/.dotfiles/prompt
 source ~/.dotfiles/aliases
