@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export LSCOLORS=FxFxCxDxBxegedabagacad
+#export LSCOLORS=FxFxCxDxBxegedabagacad
+eval $( dircolors -b $HOME/.dotfiles/LS_COLOURS )
 export CLICOLOR=1
 
 export EDITOR=nano
