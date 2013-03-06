@@ -10,5 +10,5 @@ export TERM=xterm-256color
 export LANG='en_GB.UTF-8'
 export LANGUAGE=$LANG
 
-source ~/.dotfiles/prompt
-source ~/.dotfiles/aliases
+source $HOME/.dotfiles/prompt
+source $HOME/.dotfiles/aliases
