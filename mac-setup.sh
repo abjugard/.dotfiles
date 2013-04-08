@@ -114,7 +114,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
