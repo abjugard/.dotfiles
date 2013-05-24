@@ -36,4 +36,4 @@ set morespace
 #set tempfile
 set nowrap
 set wordbounds
-set softwrap
+#set softwrap
