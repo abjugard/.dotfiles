@@ -8,7 +8,7 @@ randC() {
 }
 
 printColours() {
-	for k in {1..16}
+	for k in {0..15}
 	do
 		printf "`extC $k`$k$extrst "
 	done
@@ -17,7 +17,7 @@ printColours() {
 	do
 		for j in {1..6}
 		do
-			tmp=$((i*6+j+16))
+			tmp=$((i*6+j+15))
 			printf "`extC $tmp`$tmp$extrst "
 		done
 	printf "\n"
