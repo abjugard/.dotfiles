@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cp -f setup/.* ~/
-
-echo "source ~/.dotfiles/bash_profile" >> ~/.bash_profile
-
-touch .setupcomplete

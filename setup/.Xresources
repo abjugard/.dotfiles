@@ -1,0 +1,44 @@
+! Terminal configuration
+URxvt*termName: rxvt-256color
+URxvt*iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
+
+! Perl plugins
+URxvt*perl-ext-common: default,matcher,vtwheel,fullscreen,clipboard,url-select,keyboard-select
+
+! Background colours
+URxvt*depth: 32
+URxvt*background: [90]#000
+URxvt*foreground: #eee
+
+! Font
+URxvt*font: -xos4-terminus-medium-r-normal--14-*-*-*-*-*-*-*
+
+! URL-opening configuration
+URxvt*url-launcher: google-chrome
+URxvt*matcher.button: 1
+
+! Scrollbar
+URxvt*scrollstyle: plain
+URxvt*scrollBar: false
+
+! Scrollback
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+! size of scrollback
+URxvt*saveLines: 12000
+
+! Fullscreen binding
+URxvt*keysym.F11: perl:fullscreen:switch
+
+URxvt*url-select.launcher:  google-chrome
+URxvt*url-select.underline: true
+URxvt*keysym.M-u:           perl:url-select:select_next
+URxvt*keysym.M-Escape:      perl:keyboard-select:activate
+URxvt*keysym.M-s:           perl:keyboard-select:search
+
+URxvt*keysym.Mod4-c:   perl:clipboard:copy
+URxvt*keysym.Mod4-v:   perl:clipboard:paste

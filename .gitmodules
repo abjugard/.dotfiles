@@ -1,3 +1,6 @@
 [submodule "nanorc"]
 	path = nanorc
 	url = git@github.com:scopatz/nanorc.git
+[submodule "liquidprompt"]
+	path = liquidprompt
+	url = git@github.com:nojhan/liquidprompt.git
