@@ -10,5 +10,7 @@ export EDITOR=nano
 export LANG='en_GB.UTF-8'
 export LANGUAGE=$LANG
 
-source $HOME/.dotfiles/prompt
+#source $HOME/.dotfiles/prompt
+source $HOME/.dotfiles/liquidprompt/liquidprompt
+
 source $HOME/.dotfiles/aliases
