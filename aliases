@@ -15,3 +15,6 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gl='git log'
+
+#mac-only
+alias qlf='qlmanage -p "$1" >& /dev/null'
