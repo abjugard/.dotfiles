@@ -7,7 +7,7 @@ cp -f setup/.* $HOME/
 if [ ! -d "$HOME/.config" ]; then
 	mkdir $HOME/.config
 fi
-cp -f $DOTFILES/* $HOME/.config
+cp -f $DOTFILES/config/* $HOME/.config/
 
 ## Bash
 echo "export DOTFILES=\$HOME/.dotfiles" >> $HOME/.bashrc
