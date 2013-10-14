@@ -4,3 +4,6 @@
 [submodule "liquidprompt"]
 	path = liquidprompt
 	url = git@github.com:nojhan/liquidprompt.git
+[submodule "LS_COLOURS"]
+	path = LS_COLOURS
+	url = https://github.com/trapd00r/LS_COLORS
