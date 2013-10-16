@@ -6,4 +6,4 @@
 	url = git@github.com:nojhan/liquidprompt.git
 [submodule "LS_COLOURS"]
 	path = LS_COLOURS
-	url = https://github.com/trapd00r/LS_COLORS
+	url = git@github.com:trapd00r/LS_COLORS.git
