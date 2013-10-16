@@ -38,6 +38,9 @@ source $HOME/.dotfiles/aliases
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
+bindkey  "^[[A"    history-beginning-search-backward
+bindkey  "^[[B"  history-beginning-search-forward
+
 #source /usr/share/doc/pkgfile/command-not-found.zsh
 
 ## LiquidPrompt
