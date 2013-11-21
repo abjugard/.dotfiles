@@ -24,7 +24,9 @@ SAVEHIST=1000
 HISTFILE=~/.zhistory
 
 ## Export variables for shell
-eval $( dircolors -b $HOME/.dotfiles/LS_COLOURS/LS_COLORS )
+export DOTFILES=$HOME/.dotfiles
+
+eval $( dircolors -b $DOTFILES/LS_COLOURS/LS_COLORS )
 export CLICOLOR=1
 
 export EDITOR=nano
@@ -33,7 +35,7 @@ export LANG='en_GB.UTF-8'
 export LANGUAGE=$LANG
 
 ## Aliases
-source $HOME/.dotfiles/aliases
+source $DOTFILES/aliases
 
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
@@ -44,4 +46,7 @@ bindkey  "^[[B"  history-beginning-search-forward
 #source /usr/share/doc/pkgfile/command-not-found.zsh
 
 ## LiquidPrompt
-source ~/.dotfiles/liquidprompt/liquidprompt
+source $DOTFILES/liquidprompt/liquidprompt
+
+## Plugins
+source $DOTFILES/zsh-plugins/*/*.zsh

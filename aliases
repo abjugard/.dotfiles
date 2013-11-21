@@ -2,7 +2,7 @@
 
 alias clt='printf \033c'
 alias sl='sl -e'
-alias ls='ls --color=auto'
+alias ls='ls -AhF --color=auto --group-directories-first'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
@@ -10,13 +10,13 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-#git
+# git
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gl='git log'
 
-#mac-only
+# mac-only
 alias qlf='qlmanage -p "$1" >& /dev/null'
 
 alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
