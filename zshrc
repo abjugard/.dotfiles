@@ -50,3 +50,5 @@ source $DOTFILES/liquidprompt/liquidprompt
 
 ## Plugins
 source $DOTFILES/zsh-plugins/*/*.zsh
+
+export PATH="$PATH:$DOTFILES/bin"
