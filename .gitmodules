@@ -1,12 +1,12 @@
 [submodule "nanorc"]
 	path = nanorc
-	url = git@github.com:scopatz/nanorc.git
+	url = http://github.com/scopatz/nanorc.git
 [submodule "liquidprompt"]
 	path = liquidprompt
-	url = git@github.com:nojhan/liquidprompt.git
+	url = http://github.com/nojhan/liquidprompt.git
 [submodule "LS_COLOURS"]
 	path = LS_COLOURS
-	url = git@github.com:trapd00r/LS_COLORS.git
+	url = http://github.com/trapd00r/LS_COLORS.git
 [submodule "zsh-plugins/zsh-syntax-highlighting-filetypes"]
 	path = zsh-plugins/zsh-syntax-highlighting-filetypes
-	url = git@github.com:trapd00r/zsh-syntax-highlighting-filetypes.git
+	url = http://github.com/trapd00r/zsh-syntax-highlighting-filetypes.git
