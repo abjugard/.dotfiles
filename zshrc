@@ -24,7 +24,7 @@ SAVEHIST=1000
 HISTFILE=~/.zhistory
 
 ## Export variables for shell
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES="$HOME/.dotfiles"
 
 eval $( dircolors -b $DOTFILES/LS_COLOURS/LS_COLORS )
 export CLICOLOR=1
