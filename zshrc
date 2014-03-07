@@ -43,12 +43,12 @@ source $DOTFILES/aliases
 bindkey  "^[[A"    history-beginning-search-backward
 bindkey  "^[[B"  history-beginning-search-forward
 
-#source /usr/share/doc/pkgfile/command-not-found.zsh
-
-## LiquidPrompt
-source $DOTFILES/liquidprompt/liquidprompt
-
-## Plugins
-source $DOTFILES/zsh-plugins/*/*.zsh
+## Antigen
+source $DOTFILES/zsh-plugins/antigen/antigen.zsh
+antigen bundle nojhan/liquidprompt
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
+antigen apply
 
 export PATH="$PATH:$DOTFILES/bin"
