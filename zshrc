@@ -45,10 +45,12 @@ bindkey  "^[[B"  history-beginning-search-forward
 
 ## Antigen
 source $DOTFILES/zsh-plugins/antigen/antigen.zsh
-antigen bundle nojhan/liquidprompt
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
+antigen bundle <<EOBUNDLES
+	nojhan/liquidprompt
+	command-not-found
+	zsh-users/zsh-syntax-highlighting
+	trapd00r/zsh-syntax-highlighting-filetypes
+EOBUNDLES
 antigen apply
 
 export PATH="$PATH:$DOTFILES/bin"
