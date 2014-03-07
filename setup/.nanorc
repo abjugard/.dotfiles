@@ -1,5 +1,6 @@
 #ls -1 nanorc/*.nanorc | awk '{printf "include ~/.dotfiles/%s\n",$1}'
 include ~/.dotfiles/nanorc/apacheconf.nanorc
+include ~/.dotfiles/nanorc/asciidoc.nanorc
 include ~/.dotfiles/nanorc/asm.nanorc
 include ~/.dotfiles/nanorc/awk.nanorc
 include ~/.dotfiles/nanorc/c.nanorc
