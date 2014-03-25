@@ -1,0 +1,66 @@
+#compdef diskutil
+
+local curcontext="$curcontext" state line ret=1
+
+local -a _1st_arguments
+_1st_arguments=(
+  'list:list the partitions of a disk'
+  'information:get information on a specific disk or partition'
+  'listFilesystems:list file systems available for formatting'
+  'activity:continuous log of system-wide disk arbitration'
+  'unmount:unmount a single volume'
+  'unmountDisk:unmount an entire disk (all volumes)'
+  'eject:eject a disk'
+  'mount:mount a single volume'
+  'mountDisk:mount an entire disk (all mountable volumes)'
+  'enableJournal:enable HFS+ journaling on a mounted HFS+ volume'
+  'disableJournal:disable HFS+ journaling on a mounted HFS+ volume'
+  'moveJournal:move the HFS+ journal onto another volume'
+  'enableOwnership:treat as exact User/Group IDs for a mounted volume'
+  'disableOwnership:ignore on-disk User/Group IDs for a mounted volume'
+  'renameVolume:rename a volume'
+  'verifyVolume:verify the file system data structures of a volume'
+  'repairVolume:repair the file system data structures of a volume'
+  'verifyDisk:verify the components of a partition map of a disk'
+  'repairDisk:repair the components of a partition map of a disk'
+  'verifyPermissions:verify the permissions of a Mac OS X volume'
+  'repairPermissions:repair the permissions of a Mac OS X volume'
+  'eraseDisk:erase an existing disk, removing all volumes'
+  'eraseVolume:erase an existing volume'
+  'reformat:erase an existing volume with same name and type'
+  'eraseOptical:erase optical media (CD/RW, DVD/RW, etc.)'
+  'zeroDisk:erase a disk, writing zeros to the media'
+  'randomDisk:erase a disk, writing random data to the media'
+  'secureErase:securely erase a disk or freespace on a volume'
+  'partitionDisk:(re)partition a disk, removing all volumes'
+  'resizeVolume:resize a volume, increasing or decreasing its size'
+  'splitPartition:split an existing partition into two or more'
+  'mergePartitions:combine two or more existing partitions into one'
+  # 'appleRAID <verb>:perform additional verbs related to AppleRAID'
+  # 'coreStorage <verb:perform additional verbs related to CoreStorage'
+)
+
+_arguments -C \
+  '1: :->cmds' \
+  '*: :->args' && ret=0
+
+case $state in
+  cmds)
+    _describe -t commands 'diskutil command' _1st_arguments && ret=0
+    ;;
+  args)
+    case $words[2] in
+      (listFilesystems|activity)
+        (( ret )) && _message 'no more arguments'
+        ;;
+      (list|information|*Disk|eject|secureErase)
+        _values 'disks' $(ls /dev/*disk*) && ret=0
+        ;;
+      *)
+        _files
+        ;;
+    esac
+    ;;
+esac
+
+return ret
