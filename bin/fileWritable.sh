@@ -1,5 +1,5 @@
-#!/bin/bash
-PROG="$1"
+#!/usr/bin/env bash
+PROG=`which $1`
 FILE="$2"
 
 FILES="${*:2}"

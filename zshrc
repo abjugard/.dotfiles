@@ -6,11 +6,16 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
+autoload -U history-search-end
+
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
 compinit
 
 ## Set options
 setopt append_history
-setopt auto_cd
+#setopt auto_cd
 setopt complete_aliases
 setopt complete_in_word
 setopt correct
@@ -18,6 +23,7 @@ setopt extended_glob
 setopt no_match
 setopt notify
 setopt no_beep
+setopt histignorespace
 bindkey -e
 
 ## History
@@ -39,11 +45,8 @@ export LANGUAGE=$LANG
 ## Aliases
 source $DOTFILES/aliases
 
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
-
-bindkey  "^[[A"    history-beginning-search-backward
-bindkey  "^[[B"  history-beginning-search-forward
+bindkey "\e[A" history-beginning-search-backward-end
+bindkey "\e[B" history-beginning-search-forward-end
 
 ## Antigen
 source $DOTFILES/zsh-plugins/antigen/antigen.zsh
@@ -52,6 +55,7 @@ antigen bundles <<EOBUNDLES
 	command-not-found
 	zsh-users/zsh-syntax-highlighting
 	trapd00r/zsh-syntax-highlighting-filetypes
+	robbyrussell/oh-my-zsh plugins/osx
 EOBUNDLES
 
 antigen apply
