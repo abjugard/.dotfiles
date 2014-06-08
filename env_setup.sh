@@ -2,6 +2,8 @@
 
 DOTFILES=`pwd`
 
+git submodule update --init
+
 cp -f setup/.* $HOME/
 
 if [ ! -d "$HOME/.config" ]; then
