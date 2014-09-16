@@ -77,10 +77,41 @@ precmd() {
     print -P "\n$(repo_information) %F{yellow}$(cmd_exec_time)%f"
 }
 
+jobcount()
+{
+    local running=$(( $(jobs -r | wc -l) ))
+    local stopped=$(( $(jobs -s | wc -l) ))
+    local n_screen=$(screen -ls 2> /dev/null | grep -c '[Dd]etach[^)]*)$')
+    local n_tmux=$(tmux list-sessions 2> /dev/null | grep -cv attached)
+    local detached=$(( $n_screen + $n_tmux ))
+    local m_detached="d"
+    local m_stop="z"
+    local m_run="&"
+    local ret=""
+
+    if [[ $detached != "0" ]] ; then
+        ret="${ret}${detached}${m_detached}"
+    fi
+
+    if [[ $running != "0" ]] ; then
+        if [[ $ret != "" ]] ; then ret="${ret}/"; fi
+        ret="${ret}${running}${m_run}"
+    fi
+
+    if [[ $stopped != "0" ]] ; then
+        if [[ $ret != "" ]] ; then ret="${ret}/"; fi
+        ret="${ret}${stopped}${m_stop}"
+    fi
+
+    if [[ "$ret" != "" ]] ; then ret="${ret} ● "; fi
+
+    echo -ne "$ret"
+}
+
 # Define prompts
 #
 PROMPT="%(?.%F{magenta}.%F{red})❯%f " # Display a red prompt char on failure
-RPROMPT="%F{8}${SSH_TTY:+%n@%m ● }%*% %f"    # Display username if connected via SSH
+RPROMPT='%F{8}${SSH_TTY:+%n@%m ● } $(jobcount)%*% %f' # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
 #
