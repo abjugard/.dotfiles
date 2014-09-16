@@ -1,63 +1,83 @@
-fpath=($HOME/.dotfiles/zsh-completions $fpath)
+# Path to your oh-my-zsh installation.
+export ZSH=$DOTS/oh-my-zsh
 
-## Completion
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle :compinstall filename '$HOME/.zshrc'
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+if [[ -z "$ZSH_THEME" ]]
+then
+	ZSH_THEME="robbyrussell"
+fi
 
-autoload -Uz compinit
-autoload -U history-search-end
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-compinit
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-## Set options
-setopt append_history
-#setopt auto_cd
-setopt complete_aliases
-setopt complete_in_word
-setopt correct
-setopt extended_glob
-setopt no_match
-setopt notify
-setopt no_beep
-setopt histignorespace
-bindkey -e
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-## History
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zhistory
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-## Export variables for shell
-export DOTFILES="$HOME/.dotfiles"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-eval $( dircolors -b $DOTFILES/LS_COLOURS/LS_COLORS )
-export CLICOLOR=1
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-export EDITOR=nano
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export LANG='en_GB.UTF-8'
-export LANGUAGE=$LANG
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
 
-## Aliases
-source $DOTFILES/aliases
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-bindkey "\e[A" history-beginning-search-backward-end
-bindkey "\e[B" history-beginning-search-forward-end
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=($plugins git sudo)
 
-## Antigen
-source $DOTFILES/zsh-plugins/antigen/antigen.zsh
-antigen bundles <<EOBUNDLES
-	nojhan/liquidprompt
-	command-not-found
-	zsh-users/zsh-syntax-highlighting
-	trapd00r/zsh-syntax-highlighting-filetypes
-	robbyrussell/oh-my-zsh plugins/osx
-EOBUNDLES
+source $ZSH/oh-my-zsh.sh
 
-antigen apply
+# User configuration
 
-export PATH="$PATH:$DOTFILES/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_GB.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

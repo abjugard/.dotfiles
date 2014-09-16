@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=`pwd`
+DOTS=`pwd`
 
 git submodule update --init
 
@@ -9,14 +9,14 @@ cp -f setup/.* $HOME/
 if [ ! -d "$HOME/.config" ]; then
 	mkdir $HOME/.config
 fi
-cp -f $DOTFILES/config/* $HOME/.config/
+cp -f $DOTS/config/* $HOME/.config/
 
 ## Bash
-echo "export DOTFILES=\$HOME/.dotfiles" >> $HOME/.bashrc
-echo "source \$DOTFILES/bashrc" >> $HOME/.bashrc
+echo "export DOTS=\$HOME/.dotfiles" >> $HOME/.bashrc
+echo "source \$DOTS/bashrc" >> $HOME/.bashrc
 
 ## ZSH
-echo "export DOTFILES=\$HOME/.dotfiles" >> $HOME/.zshrc
-echo "source \$DOTFILES/zshrc" >> $HOME/.zshrc
+echo "export DOTS=\$HOME/.dotfiles" >> $HOME/.zshrc
+echo "source \$DOTS/zshrc" >> $HOME/.zshrc
 
 touch .setupcomplete
