@@ -18,6 +18,9 @@
 #   Github:   https://github.com/nicoulaj
 #   Twitter:  https://twitter.com/nicoulaj
 #
+# Adrian Bjugård
+#   Keybase:  https://keybase.io/bjugard
+#
 # ------------------------------------------------------------------------------
 
 # Set required options

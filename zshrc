@@ -7,7 +7,7 @@ export ZSH=$DOTS/oh-my-zsh
 # time that oh-my-zsh is loaded.
 if [[ -z "$ZSH_THEME" ]]
 then
-	ZSH_THEME="../../rekoil"
+	ZSH_THEME="purekoil"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
@@ -42,7 +42,7 @@ fi
 HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$DOTS/my-zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
