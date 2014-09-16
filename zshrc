@@ -7,7 +7,7 @@ export ZSH=$DOTS/oh-my-zsh
 # time that oh-my-zsh is loaded.
 if [[ -z "$ZSH_THEME" ]]
 then
-	ZSH_THEME="robbyrussell"
+	ZSH_THEME="pure"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
