@@ -7,7 +7,7 @@ export ZSH=$DOTS/oh-my-zsh
 # time that oh-my-zsh is loaded.
 if [[ -z "$ZSH_THEME" ]]
 then
-	ZSH_THEME="pure"
+	ZSH_THEME="../../rekoil"
 fi
 
 # Uncomment the following line to use case-sensitive completion.
@@ -56,6 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
+source $DOTS/aliases
 
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8

@@ -19,4 +19,4 @@ alias gl='git log'
 # mac-only
 alias qlf='qlmanage -p "$1" >& /dev/null'
 
-alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
+#alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
