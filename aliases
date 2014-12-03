@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias clt='printf \033c'
+alias cls="echo -ne '\033c'"
 alias sl='sl -e'
 #alias ls='ls --file-type --color=auto --group-directories-first'
 #alias dir='dir --color=auto'
