@@ -29,7 +29,7 @@ DISABLE_AUTO_UPDATE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -51,6 +51,7 @@ ZSH_CUSTOM=$DOTS/my-zsh
 plugins=($plugins git sudo colored-man)
 
 source $ZSH/oh-my-zsh.sh
+source $DOTS/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
