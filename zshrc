@@ -62,6 +62,9 @@ source $DOTS/aliases
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
 
+# LS_COLOURS
+eval $( dircolors -b $DOTS/LS_COLOURS/LS_COLORS )
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
