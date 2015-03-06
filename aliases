@@ -19,4 +19,7 @@ alias gl='git log'
 # mac-only
 alias qlf='qlmanage -p "$1" >& /dev/null'
 
+# utilities
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 #alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
