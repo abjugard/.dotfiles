@@ -55,7 +55,7 @@ source $DOTS/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 source $DOTS/aliases
 
