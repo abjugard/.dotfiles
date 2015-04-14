@@ -18,3 +18,7 @@
 	path = zsh-plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 	branch = master
+[submodule "colorschemes"]
+	path = colorschemes
+	url = https://github.com/mbadolato/iTerm2-Color-Schemes
+    branch = master
