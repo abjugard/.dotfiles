@@ -3,6 +3,9 @@
 DOTS=`pwd`
 
 git submodule update --init
+git submodule foreach git pull --rebase
+git submodule foreach git checkout master
+git submodule foreach git pull --rebase
 
 cp -f setup/.* $HOME/
 
