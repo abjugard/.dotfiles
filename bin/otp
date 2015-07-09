@@ -14,20 +14,18 @@ then
 fi
 
 conf="$HOME/.config/otpkeys.enc"
-tempfile=$(mktemp)
 
 echo -n Password:
 read -s pass
 echo
 
-openssl aes-256-cbc -d -a -in $conf -out $tempfile -pass pass:$pass 2>/dev/null
+out=$(openssl aes-256-cbc -d -a -in $conf -pass pass:$pass 2>/dev/null)
 if [ $? -ne 0 ]; then
     echo "Bad password"
     exit
 fi
 
-otpkey=` grep ^$1 $tempfile | cut -d"=" -f 2 | sed "s/ //g" `
-rm -f $tempfile
+otpkey=` echo $out | grep ^$1 | cut -d"=" -f 2 | sed "s/ //g" `
 if [ -z $otpkey ]
 then
     echo "$scriptname: Bad Service Name"
