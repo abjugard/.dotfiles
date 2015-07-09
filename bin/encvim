@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+scriptname=`basename $0`
+if [ -z $1 ]
+then
+    echo "$scriptname: File Name Req'd"
+    echo ""
+    echo "Usage:"
+    echo "   $scriptname filename.enc"
+    echo ""
+    echo "(created/modified files are encrypted using aes-256-cbc)"
+    exit
+fi
 
 file="$1"
 tempfile=$(mktemp)
