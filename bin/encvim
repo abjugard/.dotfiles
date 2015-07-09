@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+file="$1"
+tempfile=$(mktemp)
+
+echo -n Password: 
+read -s pass
+echo
+
+openssl="/usr/bin/openssl"
+
+function decrypt {
+    openssl aes-256-cbc -d -a -in $file -out $tempfile -pass pass:$pass 2>/dev/null
+}
+function encrypt {
+    openssl aes-256-cbc -a -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
+}
+
+if [ -f "$file" ]; then
+    decrypt
+    if [ $? -ne 0 ]; then
+        echo "Bad password"
+        exit
+    fi
+fi
+
+$EDITOR $tempfile
+encrypt
+rm -f $tempfile
+
