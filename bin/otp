@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 scriptname=`basename $0`
-if [ -z $1 ]
-then
+if [[ -z $1 ]]; then
     echo "$scriptname: Service Name Req'd"
     echo ""
     echo "Usage:"
@@ -13,22 +12,31 @@ then
     exit
 fi
 
+echoerr() { echo "$@" 1>&2; }
+
 conf="$HOME/.config/otpkeys.enc"
 
-echo -n Password:
+echoerr -n Password:
 read -s pass
-echo
+echoerr
 
 out=$(openssl aes-256-cbc -d -a -in $conf -pass pass:$pass 2>/dev/null)
-if [ $? -ne 0 ]; then
+if [[ $? -ne 0 ]]; then
     echo "Bad password"
     exit
 fi
 
-otpkey=` echo $out | grep ^$1 | cut -d"=" -f 2 | sed "s/ //g" `
-if [ -z $otpkey ]
-then
+data=` echo "$out" | grep ^$1 | cut -d"=" -f 2 | sed "s/ //g" `
+if [[ -z $data ]]; then
     echo "$scriptname: Bad Service Name"
     exit
 fi
-/usr/local/bin/oathtool --totp -b $otpkey
+if [[ $data == *":"* ]]; then
+    otpkey=` echo $data | cut -d: -f1 `
+    digits=` echo $data | cut -d: -f2 `
+else
+    otpkey=$data
+    digits=6
+fi
+
+/usr/local/bin/oathtool --totp -b $otpkey -d $digits
