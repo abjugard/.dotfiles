@@ -21,10 +21,10 @@ echo
 openssl="/usr/bin/openssl"
 
 function decrypt {
-    openssl aes-256-cbc -d -a -in $file -out $tempfile -pass pass:$pass 2>/dev/null
+    openssl aes-256-cbc -d -in $file -out $tempfile -pass pass:$pass 2>/dev/null
 }
 function encrypt {
-    openssl aes-256-cbc -a -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
+    openssl aes-256-cbc -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
 }
 
 if [ -f "$file" ]; then
