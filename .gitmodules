@@ -25,3 +25,6 @@
 [submodule "my-zsh/plugins/pebble"]
 	path = my-zsh/plugins/pebble
 	url = https://github.com/Neal/pebble-zsh-completion.git
+[submodule "gibo"]
+	path = gibo
+	url = https://github.com/simonwhitaker/gibo.git
