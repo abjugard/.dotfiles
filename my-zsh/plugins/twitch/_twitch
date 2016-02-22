@@ -1,15 +1,10 @@
 #compdef twitch
 
 _twitch() {
-    local -a results
-    #results=$(history | awk '$4 == "twitch" {print $5;}' | sort | uniq)
-
     if (( CURRENT == 2 )); then
-        #_arguments $results
         compadd ${(u@)${(z)${history[(R)twitch *]}}:#twitch}
     fi
 
-    #compadd $results
     return 0
 }
 
