@@ -3,6 +3,8 @@
 _twitch() {
     if (( CURRENT == 2 )); then
         compadd ${(u@)${(z)${history[(R)twitch *]}}:#twitch}
+    elif (( CURRENT == 3 )); then
+        compadd "$@" low medium high source
     fi
 
     return 0
