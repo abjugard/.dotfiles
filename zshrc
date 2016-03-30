@@ -65,8 +65,8 @@ export LANG=en_GB.UTF-8
 # LS_COLOURS
 eval $( dircolors -b $DOTS/LS_COLOURS/LS_COLORS )
 
-# gitcd command
-source $DOTS/sh/gitcd.sh
+# source custom commands
+source $DOTS/sh/*
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
