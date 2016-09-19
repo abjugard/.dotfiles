@@ -1,14 +1,6 @@
-[submodule "nanorc"]
-	path = nanorc
-	url = http://github.com/scopatz/nanorc.git
-	branch = master
 [submodule "LS_COLOURS"]
 	path = LS_COLOURS
 	url = http://github.com/trapd00r/LS_COLORS.git
-	branch = master
-[submodule "zsh-plugins/antigen"]
-	path = zsh-plugins/antigen
-	url = http://github.com/zsh-users/antigen.git
 	branch = master
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
