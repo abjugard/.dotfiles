@@ -48,7 +48,7 @@ ZSH_CUSTOM=$DOTS/my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=($plugins git sudo colored-man mosh zsh-syntax-highlighting gibo)
+plugins=($plugins git sudo colored-man-pages mosh zsh-syntax-highlighting gibo)
 fpath=($fpath "$DOTS/my-zsh/functions")
 
 source $ZSH/oh-my-zsh.sh
