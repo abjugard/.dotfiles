@@ -28,3 +28,6 @@
 [submodule "gibo"]
 	path = gibo
 	url = https://github.com/simonwhitaker/gibo.git
+[submodule "submodules/pure-theme"]
+	path = submodules/pure-theme
+	url = https://github.com/sindresorhus/pure.git
