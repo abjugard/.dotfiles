@@ -26,3 +26,11 @@
 	path = submodules/pure-theme
 	url = https://github.com/sindresorhus/pure.git
 	branch = master
+[submodule "zplug"]
+	path = zplug
+	url = https://github.com/zplug/zplug.git
+	branch = master
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
+	branch = master

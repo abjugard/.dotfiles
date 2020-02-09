@@ -1,1 +1,1 @@
-../../../gibo/gibo-completion.zsh
+../../../gibo/shell-completions/gibo-completion.zsh

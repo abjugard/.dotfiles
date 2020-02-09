@@ -19,3 +19,6 @@ alias qlf='qlmanage -p "$1" >& /dev/null'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 #alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
+alias tb="nc termbin.com 9999 | pbcopy"
+
+idn () { python -c "print('$1'.decode('utf-8').encode('idna'))"}

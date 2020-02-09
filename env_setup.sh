@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
-DOTS=`pwd`
+export DOTS=$(dirname $(realpath -s $0))
 
 git submodule update --init
 git submodule foreach git checkout master
@@ -13,12 +13,11 @@ if [ ! -d "$HOME/.config" ]; then
 fi
 cp -f $DOTS/config/* $HOME/.config/
 
-## Bash
-echo "export DOTS=\$HOME/.dotfiles" >> $HOME/.bashrc
-echo "source \$DOTS/bashrc" >> $HOME/.bashrc
-
 ## ZSH
-echo "export DOTS=\$HOME/.dotfiles" >> $HOME/.zshrc
+echo "export DOTS=\"$DOTS\"" >> $HOME/.zshrc
 echo "source \$DOTS/zshrc" >> $HOME/.zshrc
+
+## fzf
+bash fzf/install --64 --all
 
 touch .setupcomplete
