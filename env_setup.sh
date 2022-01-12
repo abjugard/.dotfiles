@@ -18,6 +18,6 @@ echo "export DOTS=\"$DOTS\"" >> $HOME/.zshrc
 echo "source \$DOTS/zshrc" >> $HOME/.zshrc
 
 ## fzf
-bash fzf/install --64 --all
+bash fzf/install --all
 
 touch .setupcomplete
