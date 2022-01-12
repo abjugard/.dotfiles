@@ -20,11 +20,13 @@ echo
 
 openssl="/usr/bin/openssl"
 
+config="-pbkdf2 -iter 10000 -md sha256"
+
 function decrypt {
-    openssl aes-256-cbc -d -in $file -out $tempfile -pass pass:$pass 2>/dev/null
+    openssl aes-256-cbc -d $config -in $file -out $tempfile -pass pass:$pass 2>/dev/null
 }
 function encrypt {
-    openssl aes-256-cbc -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
+    openssl aes-256-cbc $config -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
 }
 
 if [ -f "$file" ]; then
