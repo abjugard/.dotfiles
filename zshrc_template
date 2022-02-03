@@ -1,0 +1,7 @@
+export EDITOR=vim
+export HISTCONTROL=ignoreboth:erasedups
+
+# macOS
+#plugins=($plugins brew diskutil twitch gem)
+
+source $DOTS/zshrc
