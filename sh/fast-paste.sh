@@ -1,0 +1,1 @@
+zstyle :bracketed-paste-magic active-widgets '.self-*'
