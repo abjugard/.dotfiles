@@ -2,9 +2,7 @@
 
 export DOTS=$(dirname $(realpath -s $0))
 
-git submodule update --init
-git submodule foreach git checkout master
-git submodule foreach git pull --rebase
+git submodule update --init --remote --force
 
 cp -f setup/.* $HOME/
 
