@@ -2,13 +2,13 @@
 scriptname=`basename $0`
 if [ -z $1 ]
 then
-    echo "$scriptname: File Name Req'd"
-    echo ""
-    echo "Usage:"
-    echo "   $scriptname filename.enc"
-    echo ""
-    echo "(created/modified files are encrypted using aes-256-cbc)"
-    exit
+  echo "$scriptname: File Name Req'd"
+  echo ""
+  echo "Usage:"
+  echo "   $scriptname filename.enc"
+  echo ""
+  echo "(created/modified files are encrypted using aes-256-cbc)"
+  exit
 fi
 
 file="$1"
@@ -23,18 +23,26 @@ openssl="/usr/bin/openssl"
 config="-pbkdf2 -iter 10000 -md sha256"
 
 function decrypt {
-    openssl aes-256-cbc -d $config -in $file -out $tempfile -pass pass:$pass 2>/dev/null
+  openssl aes-256-cbc -d $config -in $file -out $tempfile -pass pass:"$pass" 2>/dev/null
 }
 function encrypt {
-    openssl aes-256-cbc $config -salt -in $tempfile -out $file -pass pass:$pass 2>/dev/null
+  openssl aes-256-cbc $config -salt -in $tempfile -out $file -pass pass:"$pass" 2>/dev/null
 }
 
 if [ -f "$file" ]; then
-    decrypt
-    if [ $? -ne 0 ]; then
-        echo "Bad password"
-        exit
-    fi
+  decrypt
+  if [ $? -ne 0 ]; then
+    echo "Bad password"
+    exit
+  fi
+else
+  echo -n Verify password: 
+  read -s pass2
+  echo
+  if [ "$pass" != "$pass2" ]; then
+    echo "Failed to verify password"
+    exit
+  fi
 fi
 
 $EDITOR $tempfile
