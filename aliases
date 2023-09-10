@@ -16,9 +16,18 @@ alias gl='git log'
 alias qlf='qlmanage -p "$1" >& /dev/null'
 
 # utilities
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias myip='curl ipconfig.io'
 
 #alias nano='$HOME/.dotfiles/bin/fileWritable.sh nano'
 alias tb="nc termbin.com 9999 | pbcopy"
 
-idn () { python -c "print('$1'.decode('utf-8').encode('idna'))"}
+alias anonymise-git='FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch -f --env-filter "GIT_AUTHOR_EMAIL=287697+abjugard@users.noreply.github.com; GIT_COMMITTER_EMAIL=287697+abjugard@users.noreply.github.com;" HEAD'
+
+idnr () { python -c "print('$1'.decode('utf-8').encode('idna'))"}
+idn () { python -c "print('$1'.encode('idna').decode('utf-8'))" }
+genSecret () { tr -dc A-Za-z0-9 < /dev/urandom | head -c${1:-32} }
+digg() {
+  UPPER=$(echo $2 | tr '[:lower:]' '[:upper:]')
+  TYPE=$([ "$2" != "" ] && echo "-t$UPPER" || echo "-tA")
+  dig +nostats +nocomments +nocmd +noquestion +recurse $1 $TYPE @1.1.1.1
+}
