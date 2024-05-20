@@ -1,0 +1,5 @@
+git clone https://github.com/NvChad/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+echo "Run :MasonInstallAll after lazy.nvim finishes downloading plugins"
+echo "Update using Lazy sync"
